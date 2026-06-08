@@ -5,7 +5,13 @@
       "mcp__Claude_in_Chrome__list_connected_browsers",
       "PowerShell($f = Get-Item \"C:\\\\Users\\\\Abosede\\\\OneDrive\\\\Desktop\\\\My Website\\\\index.html\"; [PSCustomObject]@{ FullPath=$f.FullName; LastWriteTime=$f.LastWriteTime; LastWriteUTC=$f.LastWriteTimeUtc; CreationTime=$f.CreationTime; SizeKB=[math]::Round\\($f.Length/1KB,1\\); Attributes=$f.Attributes } | Format-List; \"--- Current clock ---\"; Get-Date)",
       "Bash(gh auth *)",
-      "Bash(gh repo *)"
+      "Bash(gh repo *)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git branch *)",
+      "Bash(git remote *)",
+      "Bash(git push *)"
     ]
   }
 }
