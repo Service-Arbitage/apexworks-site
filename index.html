@@ -13,7 +13,7 @@
 :root{
   --black:#050404;
   --black2:#0a0908;
-  --black3:#10100e;h
+  --black3:#10100e;
   --gold:#d4b65e;
   --gold-bright:#f0d484;
   --gold-deep:#8a7530;
@@ -168,10 +168,10 @@ body.hov #cur-r{width:64px;height:64px;border-color:var(--gold);}
 h1.hero-h{
   font-family:'Geist',sans-serif;
   font-size:clamp(3.4rem,7.2vw,8.2rem);
-  font-weight:900;line-height:1.05;letter-spacing:-.045em;
+  font-weight:900;line-height:.98;letter-spacing:-.045em;
   margin-bottom:2.5rem;padding-bottom:.6rem;
 }
-h1.hero-h .ln{display:block;overflow:visible;padding-bottom:.2em;}
+h1.hero-h .ln{display:block;overflow:visible;padding-bottom:.04em;}
 h1.hero-h .word{display:inline-block;overflow:hidden;padding:0 .08em .15em 0;}
 h1.hero-h .word.h-gold{padding-right:.15em;}
 h1.hero-h .word>span{display:inline-block;transform:translateY(105%);opacity:0;animation:up .9s cubic-bezier(.22,1,.36,1) forwards;}
@@ -247,12 +247,12 @@ h1.hero-h .word.h-gold > span{
 .corner-data{
   position:absolute;top:8rem;right:clamp(1.5rem,5vw,4rem);
   z-index:3;display:flex;flex-direction:column;gap:.5rem;align-items:flex-end;
-  font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.18em;
+  font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.14em;
   color:var(--w30);text-transform:uppercase;
   opacity:0;animation:fadeUp 1s 1s cubic-bezier(.22,1,.36,1) forwards;
 }
 .cd-row{display:flex;align-items:center;gap:.6rem;}
-.cd-dot{width:4px;height:4px;border-radius:50%;background:var(--gold);box-shadow:0 0 6px var(--gold);}
+.cd-dot{width:7px;height:7px;border-radius:50%;background:#34d058;box-shadow:0 0 8px rgba(52,208,88,.9);}
 .cd-val{color:var(--gold);}
 
 .scroll-cue{
