@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "mcp__Claude_in_Chrome__list_connected_browsers",
+      "PowerShell($f = Get-Item \"C:\\\\Users\\\\Abosede\\\\OneDrive\\\\Desktop\\\\My Website\\\\index.html\"; [PSCustomObject]@{ FullPath=$f.FullName; LastWriteTime=$f.LastWriteTime; LastWriteUTC=$f.LastWriteTimeUtc; CreationTime=$f.CreationTime; SizeKB=[math]::Round\\($f.Length/1KB,1\\); Attributes=$f.Attributes } | Format-List; \"--- Current clock ---\"; Get-Date)",
+      "Bash(gh auth *)",
+      "Bash(gh repo *)"
+    ]
+  }
+}

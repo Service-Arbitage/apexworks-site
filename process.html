@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>How It Works - The ApexWorks Process</title>
+<meta name="description" content="From brief to delivery in days, not weeks. A clear look at how ApexWorks sources talent, runs revisions, and ships your project with one point of contact."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/site.css"/>
+<style>
+  .pstep{display:grid;grid-template-columns:7rem 1fr;gap:2.5rem;padding:3rem 0;border-top:1px solid var(--border-w);align-items:start;}
+  .pstep:first-of-type{border-top:none;}
+  .pstep-n{font-family:'JetBrains Mono',monospace;font-size:3.2rem;font-weight:700;line-height:1;background:linear-gradient(180deg,var(--gold-bright),var(--gold-deep));-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-.04em;}
+  .pstep-t{font-size:clamp(1.4rem,2.6vw,2.1rem);font-weight:800;color:var(--white);letter-spacing:-.02em;margin-bottom:.7rem;line-height:1.1;}
+  .pstep-d{font-size:.95rem;color:var(--w70);font-weight:300;line-height:1.85;max-width:60ch;}
+  .pstep-list{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-top:1.2rem;}
+  .pstep-list li{font-size:.84rem;color:var(--w50);font-weight:300;display:flex;gap:.7rem;align-items:flex-start;line-height:1.55;}
+  .pstep-list li svg{width:14px;height:14px;flex-shrink:0;stroke:var(--gold);stroke-width:2.5;fill:none;margin-top:.18rem;}
+  .pstep-tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--gold);border:1px solid var(--border);padding:.4rem .9rem;border-radius:100px;letter-spacing:.1em;margin-top:1.2rem;}
+  /* typical week strip */
+  .week{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border-w);border:1px solid var(--border-w);border-radius:14px;overflow:hidden;margin-top:2.5rem;}
+  .day{background:var(--black2);padding:1.8rem;}
+  .day-n{font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--gold);letter-spacing:.16em;text-transform:uppercase;margin-bottom:.8rem;}
+  .day-t{font-size:.98rem;font-weight:700;color:var(--white);margin-bottom:.5rem;letter-spacing:-.01em;}
+  .day-d{font-size:.78rem;color:var(--w50);font-weight:300;line-height:1.65;}
+  @media(max-width:880px){.pstep{grid-template-columns:1fr;gap:1rem;}.pstep-n{font-size:2.4rem;}.week{grid-template-columns:1fr 1fr;}}
+  @media(max-width:680px){.week{grid-template-columns:1fr;}}
+</style>
+</head>
+<body data-page="process">
+<div id="cur"></div><div id="cur-r"></div>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="logo"><span class="logo-dot"></span>Apex<span>Works</span></a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="process.html" aria-current="page">Process</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html" class="nav-pill">Start a Project</a></li>
+  </ul>
+  <button class="nav-burger" id="nav-burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <ul>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="process.html" aria-current="page">Process</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html">Start a Project</a></li>
+  </ul>
+</div>
+
+<!-- ═══ PAGE HERO ═══ -->
+<header class="phero">
+  <canvas id="page-canvas" aria-hidden="true"></canvas>
+  <div class="phero-in">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span class="sep">/</span><span class="here">Process</span>
+    </nav>
+    <div class="kicker"><span class="kicker-dot"></span>Brief to delivery in days</div>
+    <h1 class="phero-h">No black box.<br><em>Just the work.</em></h1>
+    <p class="phero-sub">Here is exactly what happens after you hit send, who does what, and why it lands in days instead of weeks. The short version: you brief, we run it, you review.</p>
+  </div>
+</header>
+
+<!-- ═══ STEPS ═══ -->
+<section class="sec">
+  <div class="max-narrow">
+    <div class="s-tag rv">The four steps</div>
+    <h2 class="s-h rv" style="margin-bottom:2rem;max-width:16ch;">Simple on your end.<br><em>Busy on ours.</em></h2>
+
+    <div class="pstep rv">
+      <div class="pstep-n">01</div>
+      <div>
+        <h3 class="pstep-t">Submit your brief</h3>
+        <p class="pstep-d">Fill out a short form with what you need, when you need it, and your budget. Two minutes is plenty. You do not need a polished spec. A few clear sentences and a reference or two is enough for us to take it from there.</p>
+        <ul class="pstep-list">
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Tell us the goal, not the technical details</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Share links, files, or examples you like</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Name a deadline if you have one</li>
+        </ul>
+        <span class="pstep-tag">~2 minutes</span>
+      </div>
+    </div>
+
+    <div class="pstep rv">
+      <div class="pstep-n">02</div>
+      <div>
+        <h3 class="pstep-t">We source and brief the talent</h3>
+        <p class="pstep-d">Your contact reviews the brief and matches it to the specialist in our network who has done this exact kind of work well before. We brief them in detail so nothing gets lost in translation. You do not interview anyone or manage a thread of freelancers. That is our job.</p>
+        <ul class="pstep-list">
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Matched to a vetted, proven specialist</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Briefed thoroughly on your behalf</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>You get a confirmation and a timeline</li>
+        </ul>
+        <span class="pstep-tag">Within 24 hours</span>
+      </div>
+    </div>
+
+    <div class="pstep rv">
+      <div class="pstep-n">03</div>
+      <div>
+        <h3 class="pstep-t">Review and refine</h3>
+        <p class="pstep-d">We deliver a first version for your review. If it is right, great. If it is not, you tell us what to change and we run the revisions. There is no limit you need to watch and no awkward conversation about scope. We keep going until it is genuinely right.</p>
+        <ul class="pstep-list">
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Clear, organized first delivery</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Plain-language revision requests</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Quality checked before it reaches you</li>
+        </ul>
+        <span class="pstep-tag">Revisions until right</span>
+      </div>
+    </div>
+
+    <div class="pstep rv">
+      <div class="pstep-n">04</div>
+      <div>
+        <h3 class="pstep-t">Delivered and done</h3>
+        <p class="pstep-d">Final files land in your inbox, clean and organized, in every format you need. You own everything. Come back tomorrow with the next brief or in three months. Your contact and your project history stay right where you left them.</p>
+        <ul class="pstep-list">
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Every file format you need</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Full ownership, no strings</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Ready for the next project anytime</li>
+        </ul>
+        <span class="pstep-tag">48h average</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TYPICAL WEEK ═══ -->
+<section class="sec" style="background:var(--black2);">
+  <div class="max">
+    <div class="s-tag rv">A typical project</div>
+    <h2 class="s-h rv" style="max-width:18ch;">From Monday brief to<br><em>Wednesday delivery.</em></h2>
+    <div class="week rv">
+      <div class="day">
+        <div class="day-n">Day 0 · Mon</div>
+        <div class="day-t">You send the brief</div>
+        <div class="day-d">A few sentences and a reference. We confirm receipt and ask anything we need within the hour.</div>
+      </div>
+      <div class="day">
+        <div class="day-n">Day 1 · Tue</div>
+        <div class="day-t">We match and start</div>
+        <div class="day-d">The right specialist is briefed and working. You get a timeline so you know exactly what to expect.</div>
+      </div>
+      <div class="day">
+        <div class="day-n">Day 2 · Wed</div>
+        <div class="day-t">First version lands</div>
+        <div class="day-d">You review polished work, not a rough sketch. Most projects are close to done at this point.</div>
+      </div>
+      <div class="day">
+        <div class="day-n">Day 2 to 3</div>
+        <div class="day-t">Refine and deliver</div>
+        <div class="day-d">Any tweaks go through fast, then the final files arrive clean and ready to use.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHY IT'S FAST ═══ -->
+<section class="sec">
+  <div class="max">
+    <h2 class="s-h rv" style="max-width:14ch;">Why it moves<br>this <em>fast.</em></h2>
+    <div class="grid-3 rv" style="margin-top:3rem;">
+      <article class="card">
+        <div class="card-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3 class="card-t">The match is instant</h3>
+        <p class="card-d">We already know who is good at what. There is no hiring round, no test project, no waiting to see if a stranger works out. The right person starts almost immediately.</p>
+      </article>
+      <article class="card">
+        <div class="card-ic"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div>
+        <h3 class="card-t">The brief is clean</h3>
+        <p class="card-d">Half of any delay is a vague brief. We translate your goal into instructions a specialist can run with on the first pass, so there is far less back and forth.</p>
+      </article>
+      <article class="card">
+        <div class="card-ic"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <h3 class="card-t">One owner, start to finish</h3>
+        <p class="card-d">Nothing sits in a queue waiting for a handoff. One person owns your project end to end and keeps it moving every single day until it is delivered.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA BAND ═══ -->
+<section class="cta-band">
+  <div class="inner rv">
+    <h2>Two minutes now. <em>Polished work</em> in days.</h2>
+    <p>You have read how it works. The fastest way to feel it is to send a brief and watch the clock.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn-p"><span>Start a Project</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="services.html" class="btn-s">Browse Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-in">
+    <div class="f-brand">
+      <a href="index.html" class="f-logo"><span class="logo-dot"></span>Apex<span>Works</span></a>
+      <p class="f-tagline">One agency, every service. We source vetted specialists, manage the work, and ship results from our studio in Los Angeles.</p>
+    </div>
+    <nav class="f-nav" aria-label="Footer">
+      <div class="f-nav-group">
+        <div class="f-nav-label">Company</div>
+        <a href="about.html">About</a>
+        <a href="process.html">Process</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div class="f-nav-group">
+        <div class="f-nav-label">Services</div>
+        <a href="services.html">All Services</a>
+        <a href="services.html#branding">Branding</a>
+        <a href="services.html#web">Web Dev</a>
+        <a href="services.html#video">Video</a>
+      </div>
+      <div class="f-nav-group">
+        <div class="f-nav-label">Get Started</div>
+        <a href="contact.html">Start a Project</a>
+        <a href="contact.html">Get a Quote</a>
+        <a href="faq.html">Common Questions</a>
+      </div>
+    </nav>
+  </div>
+  <div class="foot-btm">
+    <div class="f-c">© 2026 ApexWorks Agency. All rights reserved.</div>
+    <div class="f-c">Built for excellence. Los Angeles, CA</div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="assets/site.js"></script>
+<script>
+/* Page scene: rotating particle helix (reads as a pipeline / flow) */
+ApexThree('page-canvas', function (api) {
+  var T = api.THREE, scene = api.scene, cam = api.camera;
+  cam.position.set(0, 0, 9);
+  var anchor = new T.Vector3(2.6, 0, 0);
+
+  var N = 900, g = new T.BufferGeometry(), pos = new Float32Array(N * 3);
+  for (var i = 0; i < N; i++) {
+    var a = i * 0.16, rr = 1.7;
+    pos[i*3] = Math.cos(a) * rr + anchor.x;
+    pos[i*3+1] = (i / N - 0.5) * 8.5;
+    pos[i*3+2] = Math.sin(a) * rr;
+  }
+  g.setAttribute('position', new T.BufferAttribute(pos, 3));
+  var helix = new T.Points(g, new T.PointsMaterial({ color: 0xd4b65e, size: 0.03, transparent: true, opacity: 0.7, blending: T.AdditiveBlending }));
+  scene.add(helix);
+
+  var torus = new T.Mesh(new T.TorusGeometry(1.7, 0.015, 8, 140), new T.MeshBasicMaterial({ color: 0xf0d484, transparent: true, opacity: 0.16 }));
+  torus.position.copy(anchor); scene.add(torus);
+
+  var tx = 0, ty = 0, cx = 0, cy = 0;
+  addEventListener('mousemove', function (e) { tx = (e.clientX / innerWidth - 0.5) * 0.4; ty = (e.clientY / innerHeight - 0.5) * 0.4; }, { passive: true });
+
+  return function (t) {
+    cx += (tx - cx) * 0.05; cy += (ty - cy) * 0.05;
+    cam.position.x = cx * 1.4; cam.position.y = -cy * 1.4; cam.lookAt(anchor);
+    helix.rotation.y = t * 0.28;
+    torus.rotation.x = t * 0.3; torus.rotation.y = t * 0.2;
+  };
+});
+</script>
+</body>
+</html>

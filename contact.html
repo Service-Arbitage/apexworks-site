@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Start a Project - ApexWorks</title>
+<meta name="description" content="Tell us what you need and get a clear quote and timeline within 24 hours. Free quote, zero obligation, revisions until you are 100% satisfied."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/site.css"/>
+<style>
+  .contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:5rem;align-items:start;}
+  @media(max-width:1080px){.contact-grid{grid-template-columns:1fr;gap:3rem;}}
+  .teaser-q{font-size:1rem;font-weight:700;color:var(--white);margin-bottom:.5rem;letter-spacing:-.01em;}
+  .teaser-a{font-size:.84rem;color:var(--w50);font-weight:300;line-height:1.7;}
+</style>
+</head>
+<body data-page="contact">
+<div id="cur"></div><div id="cur-r"></div>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="logo"><span class="logo-dot"></span>Apex<span>Works</span></a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="process.html">Process</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html" class="nav-pill" aria-current="page">Start a Project</a></li>
+  </ul>
+  <button class="nav-burger" id="nav-burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <ul>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="process.html">Process</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html" aria-current="page">Start a Project</a></li>
+  </ul>
+</div>
+
+<!-- ═══ PAGE HERO (compact) ═══ -->
+<header class="phero" style="min-height:46vh;">
+  <canvas id="page-canvas" aria-hidden="true"></canvas>
+  <div class="phero-in">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span class="sep">/</span><span class="here">Start a Project</span>
+    </nav>
+    <h1 class="phero-h">Let's build<br>something <em>great.</em></h1>
+    <p class="phero-sub">Tell us what you need. We come back within 24 hours with a clear quote and a timeline. No fluff, no pressure, no obligation.</p>
+  </div>
+</header>
+
+<!-- ═══ FORM ═══ -->
+<section class="sec">
+  <div class="max contact-grid">
+    <div class="rv-l">
+      <div class="s-tag">Get a quote</div>
+      <h2 class="s-h" style="font-size:clamp(2rem,3.4vw,3rem);margin-bottom:1rem;">Start with a <em>brief.</em></h2>
+      <p class="body">Fill in as much or as little as you know. Even a few sentences is enough for us to come back with a clear next step. There is no charge to ask and no commitment to continue.</p>
+      <div class="trust">
+        <div class="tr"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Free quote, zero obligation</div>
+        <div class="tr"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Reply within 24 hours, from a real person</div>
+        <div class="tr"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Revisions until you are 100% satisfied</div>
+        <div class="tr"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>One point of contact throughout</div>
+        <div class="tr"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Money-back guarantee on every project</div>
+      </div>
+    </div>
+
+    <div class="fcard rv">
+      <form id="pForm" novalidate>
+        <div class="f">
+          <label for="fname">Full Name <span class="rmk">*</span></label>
+          <input type="text" id="fname" name="name" placeholder="Zara Mensah" autocomplete="name" required aria-required="true"/>
+          <span class="f-err" id="fname-err" role="alert">Please enter your full name.</span>
+        </div>
+        <div class="f">
+          <label for="email">Email Address <span class="rmk">*</span></label>
+          <input type="email" id="email" name="email" placeholder="zara@venture.co" autocomplete="email" required aria-required="true"/>
+          <span class="f-err" id="email-err" role="alert">Please enter a valid email.</span>
+        </div>
+        <div class="f">
+          <label for="service">Service Needed <span class="rmk">*</span></label>
+          <select id="service" name="service" required aria-required="true">
+            <option value="" disabled selected>Select a service…</option>
+            <option>Logo &amp; Brand Identity</option>
+            <option>Website Development</option>
+            <option>Copywriting &amp; Content</option>
+            <option>Social &amp; Paid Ads</option>
+            <option>Video Editing &amp; Motion</option>
+            <option>Data &amp; Research</option>
+            <option>Other, described below</option>
+          </select>
+          <span class="f-err" id="service-err" role="alert">Please select a service.</span>
+        </div>
+        <div class="tw">
+          <div class="f">
+            <label for="budget">Budget</label>
+            <select id="budget" name="budget">
+              <option>Under $100</option><option>$100 to $300</option>
+              <option>$300 to $1,000</option><option>$1,000+</option>
+            </select>
+          </div>
+          <div class="f">
+            <label for="timeline">Timeline</label>
+            <select id="timeline" name="timeline">
+              <option>ASAP (1 to 3 days)</option><option>1 week</option>
+              <option>2 weeks</option><option>Flexible</option>
+            </select>
+          </div>
+        </div>
+        <div class="f">
+          <label for="details">Project Details</label>
+          <textarea id="details" name="details" placeholder="Tell us everything. The more detail, the better the result."></textarea>
+        </div>
+        <button type="submit" class="sbtn" id="submitBtn">Send My Request →</button>
+        <p class="fn">Reply within 24h · No spam, ever.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ALT CONTACT ═══ -->
+<section class="sec-sm" style="background:var(--black2);">
+  <div class="max">
+    <h2 class="s-h rv" style="font-size:clamp(1.6rem,3vw,2.4rem);margin-bottom:.6rem;">Prefer another <em>way?</em></h2>
+    <p class="body rv">The form is fastest, but you are welcome to reach us directly.</p>
+    <div class="alt-grid rv" style="margin-top:2rem;">
+      <a class="alt-card" href="mailto:hello@apexworks.studio">
+        <div class="alt-ic"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></div>
+        <div class="alt-t">Email us</div>
+        <div class="alt-v">hello@apexworks.studio</div>
+        <div class="alt-d">Send a brief or a question. A real person reads it.</div>
+      </a>
+      <div class="alt-card">
+        <div class="alt-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <div class="alt-t">Reply time</div>
+        <div class="alt-v">Within 24 hours</div>
+        <div class="alt-d">Usually much sooner during LA business hours, Monday to Friday.</div>
+      </div>
+      <div class="alt-card">
+        <div class="alt-ic"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div class="alt-t">The studio</div>
+        <div class="alt-v">Los Angeles, CA</div>
+        <div class="alt-d">Arts District. We work with clients everywhere, remotely.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ TEASER ═══ -->
+<section class="sec-sm">
+  <div class="max">
+    <div class="s-tag rv">Before you ask</div>
+    <h2 class="s-h rv" style="font-size:clamp(1.6rem,3vw,2.4rem);margin-bottom:.4rem;">A few quick <em>answers.</em></h2>
+    <div class="grid-3 rv" style="margin-top:2rem;">
+      <article class="card">
+        <div class="teaser-q">Is the quote really free?</div>
+        <div class="teaser-a">Yes. You only pay once you approve a quote and we begin. Asking costs nothing and commits you to nothing.</div>
+      </article>
+      <article class="card">
+        <div class="teaser-q">How fast is turnaround?</div>
+        <div class="teaser-a">Most projects land in about 48 hours. We give you a firm timeline the moment we confirm your brief.</div>
+      </article>
+      <article class="card">
+        <div class="teaser-q">What if I need changes?</div>
+        <div class="teaser-a">Revisions are included until you are happy. We do not count rounds or charge extra for getting it right.</div>
+      </article>
+    </div>
+    <div class="rv" style="margin-top:2rem;">
+      <a href="faq.html" class="btn-s">Read the full FAQ</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-in">
+    <div class="f-brand">
+      <a href="index.html" class="f-logo"><span class="logo-dot"></span>Apex<span>Works</span></a>
+      <p class="f-tagline">One agency, every service. We source vetted specialists, manage the work, and ship results from our studio in Los Angeles.</p>
+    </div>
+    <nav class="f-nav" aria-label="Footer">
+      <div class="f-nav-group">
+        <div class="f-nav-label">Company</div>
+        <a href="about.html">About</a>
+        <a href="process.html">Process</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div class="f-nav-group">
+        <div class="f-nav-label">Services</div>
+        <a href="services.html">All Services</a>
+        <a href="services.html#branding">Branding</a>
+        <a href="services.html#web">Web Dev</a>
+        <a href="services.html#video">Video</a>
+      </div>
+      <div class="f-nav-group">
+        <div class="f-nav-label">Get Started</div>
+        <a href="contact.html">Start a Project</a>
+        <a href="contact.html">Get a Quote</a>
+        <a href="faq.html">Common Questions</a>
+      </div>
+    </nav>
+  </div>
+  <div class="foot-btm">
+    <div class="f-c">© 2026 ApexWorks Agency. All rights reserved.</div>
+    <div class="f-c">Built for excellence. Los Angeles, CA</div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="assets/site.js"></script>
+<script>
+/* Compact scene: single floating octahedron + particles */
+ApexThree('page-canvas', function (api) {
+  var T = api.THREE, scene = api.scene, cam = api.camera;
+  cam.position.set(0, 0, 9);
+  var anchor = new T.Vector3(2.8, 0, 0);
+  var oct = new T.Mesh(new T.OctahedronGeometry(1.7, 0), new T.MeshBasicMaterial({ color: 0xd4b65e, wireframe: true, transparent: true, opacity: 0.32 }));
+  oct.position.copy(anchor); scene.add(oct);
+  var core = new T.Mesh(new T.OctahedronGeometry(1.62, 0), new T.MeshBasicMaterial({ color: 0x0a0908, transparent: true, opacity: 0.5 }));
+  core.position.copy(anchor); scene.add(core);
+
+  var N = 280, g = new T.BufferGeometry(), pos = new Float32Array(N * 3);
+  for (var i = 0; i < N; i++) { var r = 3 + Math.random() * 6; var th = Math.random() * Math.PI * 2; var ph = Math.acos(Math.random() * 2 - 1);
+    pos[i*3] = r*Math.sin(ph)*Math.cos(th); pos[i*3+1] = r*Math.sin(ph)*Math.sin(th); pos[i*3+2] = r*Math.cos(ph) - 2; }
+  g.setAttribute('position', new T.BufferAttribute(pos, 3));
+  scene.add(new T.Points(g, new T.PointsMaterial({ color: 0xd4b65e, size: 0.018, transparent: true, opacity: 0.5, blending: T.AdditiveBlending })));
+
+  var tx = 0, ty = 0, cx = 0, cy = 0;
+  addEventListener('mousemove', function (e) { tx = (e.clientX / innerWidth - 0.5) * 0.4; ty = (e.clientY / innerHeight - 0.5) * 0.4; }, { passive: true });
+
+  return function (t) {
+    cx += (tx - cx) * 0.05; cy += (ty - cy) * 0.05;
+    cam.position.x = cx * 1.4; cam.position.y = -cy * 1.4; cam.lookAt(anchor);
+    oct.rotation.x = t * 0.18; oct.rotation.y = t * 0.22; core.rotation.copy(oct.rotation);
+  };
+});
+
+/* Form: validate, show loading, then route to the thank-you page */
+ApexForm({
+  formId: 'pForm',
+  btnId: 'submitBtn',
+  required: ['fname', 'email', 'service'],
+  btnLabel: 'Send My Request →',
+  onSuccess: function () { window.location.href = 'thank-you.html'; }
+});
+</script>
+</body>
+</html>

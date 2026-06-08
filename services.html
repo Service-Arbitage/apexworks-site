@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Services & Pricing - ApexWorks</title>
+<meta name="description" content="Branding, web, copy, social, video and research, handled by vetted specialists. Clear pricing tiers, fast turnaround, and one point of contact throughout."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/site.css"/>
+<style>
+  /* compact per-service pricing tiers */
+  .mtiers{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-top:1.6rem;}
+  .mtier{border:1px solid var(--border-w);border-radius:10px;padding:1.1rem;transition:border-color .3s,background .3s;}
+  .mtier:hover{border-color:var(--border);}
+  .mtier.feat{border-color:rgba(212,182,94,.4);background:rgba(212,182,94,.05);}
+  .mtier-n{font-family:'JetBrains Mono',monospace;font-size:.52rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);}
+  .mtier-p{font-family:'JetBrains Mono',monospace;font-size:1.25rem;font-weight:700;color:var(--white);margin:.45rem 0 .3rem;letter-spacing:-.02em;}
+  .mtier-p small{font-size:.62rem;color:var(--w30);font-weight:400;}
+  .mtier-d{font-size:.74rem;color:var(--w50);line-height:1.55;font-weight:300;}
+  @media(max-width:680px){.mtiers{grid-template-columns:1fr;}}
+</style>
+</head>
+<body data-page="services">
+<div id="cur"></div><div id="cur-r"></div>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="logo"><span class="logo-dot"></span>Apex<span>Works</span></a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="services.html" aria-current="page">Services</a></li>
+    <li><a href="process.html">Process</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html" class="nav-pill">Start a Project</a></li>
+  </ul>
+  <button class="nav-burger" id="nav-burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <ul>
+    <li><a href="services.html" aria-current="page">Services</a></li>
+    <li><a href="process.html">Process</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html">Start a Project</a></li>
+  </ul>
+</div>
+
+<!-- ═══ PAGE HERO ═══ -->
+<header class="phero">
+  <canvas id="page-canvas" aria-hidden="true"></canvas>
+  <div class="phero-in">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span class="sep">/</span><span class="here">Services</span>
+    </nav>
+    <div class="kicker"><span class="kicker-dot"></span>Six disciplines, one studio</div>
+    <h1 class="phero-h">Everything you need<br>to <em>look the part.</em></h1>
+    <p class="phero-sub">Pick a discipline below for what is included, how fast it ships, and what it costs. Every tier is a flat price with revisions built in. No hourly billing, no surprises on the invoice.</p>
+  </div>
+</header>
+
+<!-- ═══ SERVICES ═══ -->
+<section class="sec">
+  <div class="max">
+
+    <!-- BRANDING -->
+    <article class="svc-block rv" id="branding">
+      <div class="svc-meta">
+        <div class="svc-num">01 / IDENTITY</div>
+        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
+        <div class="svc-tags"><span>2 to 4 days</span><span>Unlimited revisions</span></div>
+      </div>
+      <div>
+        <h2 class="svc-title">Logo & Brand Identity</h2>
+        <p class="body">A logo is the easy part. We build the whole identity around it so your brand looks deliberate everywhere it shows up, from your site to a slide deck to a coffee cup.</p>
+        <ul class="svc-includes">
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Primary and secondary logos</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Color system and palette</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Type pairing and hierarchy</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Brand guidelines document</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Social and avatar set</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Source and export files</li>
+        </ul>
+        <div class="mtiers">
+          <div class="mtier"><div class="mtier-n">Starter</div><div class="mtier-p">$49</div><div class="mtier-d">Logo plus two variants and a core color set. Right for a quick, clean launch.</div></div>
+          <div class="mtier feat"><div class="mtier-n">Studio · Popular</div><div class="mtier-p">$149</div><div class="mtier-d">Full kit: logo system, colors, type, and a short guidelines doc.</div></div>
+          <div class="mtier"><div class="mtier-n">Flagship</div><div class="mtier-p">$399</div><div class="mtier-d">Complete identity system with extended guidelines and an asset library.</div></div>
+        </div>
+        <p class="svc-use"><b>Real example</b>A founder relaunching a skincare line needed a full identity before a trade show. Brief on Monday, complete kit in her hands Friday.</p>
+      </div>
+    </article>
+
+    <!-- WEB -->
+    <article class="svc-block rv" id="web">
+      <div class="svc-meta">
+        <div class="svc-num">02 / WEB</div>
+        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <div class="svc-tags"><span>3 to 7 days</span><span>Responsive</span></div>
+      </div>
+      <div>
+        <h2 class="svc-title">Website Development</h2>
+        <p class="body">Landing pages, business sites, and storefronts that load fast, read well, and turn visitors into messages in your inbox. Built clean so you can hand it to anyone later.</p>
+        <ul class="svc-includes">
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Fully responsive build</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Copy polish and layout</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>On-page SEO basics</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Contact and lead forms</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Analytics wired in</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Launch support</li>
+        </ul>
+        <div class="mtiers">
+          <div class="mtier"><div class="mtier-n">Landing</div><div class="mtier-p">$149</div><div class="mtier-d">One high-converting page. Ideal for a launch, an event, or an ad campaign.</div></div>
+          <div class="mtier feat"><div class="mtier-n">Business · Popular</div><div class="mtier-p">$449</div><div class="mtier-d">A multi-page site with the pages a growing company actually needs.</div></div>
+          <div class="mtier"><div class="mtier-n">Store</div><div class="mtier-p">$899</div><div class="mtier-d">A storefront with products, checkout, and the basics of running it.</div></div>
+        </div>
+        <p class="svc-use"><b>Real example</b>A consultant submitted a brief Monday and had a live, polished landing page by Wednesday. She did not touch a line of it.</p>
+      </div>
+    </article>
+
+    <!-- COPY -->
+    <article class="svc-block rv" id="copy">
+      <div class="svc-meta">
+        <div class="svc-num">03 / COPY</div>
+        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
+        <div class="svc-tags"><span>1 to 3 days</span><span>SEO aware</span></div>
+      </div>
+      <div>
+        <h2 class="svc-title">Copywriting & Content</h2>
+        <p class="body">Words that sound like a person and move like a salesperson. Landing copy, email sequences, ad scripts, and SEO content that ranks without reading like it was written for a robot.</p>
+        <ul class="svc-includes">
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Landing and sales copy</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Email and nurture sequences</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Ad and social scripts</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>SEO articles and blogs</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Tone and voice guide</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Two rounds of edits</li>
+        </ul>
+        <div class="mtiers">
+          <div class="mtier"><div class="mtier-n">Single page</div><div class="mtier-p">$29</div><div class="mtier-d">One page or asset, written and tightened until it reads clean.</div></div>
+          <div class="mtier feat"><div class="mtier-n">Campaign · Popular</div><div class="mtier-p">$99</div><div class="mtier-d">A full set: landing copy, three emails, and matching ad lines.</div></div>
+          <div class="mtier"><div class="mtier-n">Retainer</div><div class="mtier-p">$249<small>/mo</small></div><div class="mtier-d">A steady stream of content with a consistent voice every week.</div></div>
+        </div>
+        <p class="svc-use"><b>Real example</b>A B2B team rewrote their homepage and saw demo requests climb over the next month, with no extra ad spend behind it.</p>
+      </div>
+    </article>
+
+    <!-- SOCIAL -->
+    <article class="svc-block rv" id="social">
+      <div class="svc-meta">
+        <div class="svc-num">04 / SOCIAL</div>
+        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+        <div class="svc-tags"><span>2 to 5 days</span><span>Per platform</span></div>
+      </div>
+      <div>
+        <h2 class="svc-title">Social & Paid Ads</h2>
+        <p class="body">Creative that stops the scroll and campaigns built to be measured. We make the assets, write the hooks, and set up the targeting so the spend actually does something.</p>
+        <ul class="svc-includes">
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Static and carousel creative</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Hooks and captions</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Ad account setup</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Audience targeting</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>A/B variants</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Simple performance report</li>
+        </ul>
+        <div class="mtiers">
+          <div class="mtier"><div class="mtier-n">Creative pack</div><div class="mtier-p">$39</div><div class="mtier-d">A batch of post-ready creative in your brand look.</div></div>
+          <div class="mtier feat"><div class="mtier-n">Campaign · Popular</div><div class="mtier-p">$129</div><div class="mtier-d">Creative plus setup and targeting for one paid campaign.</div></div>
+          <div class="mtier"><div class="mtier-n">Always-on</div><div class="mtier-p">$349<small>/mo</small></div><div class="mtier-d">Fresh creative and managed campaigns every month.</div></div>
+        </div>
+        <p class="svc-use"><b>Real example</b>A fitness brand handed us a launch with two days notice. We turned around the full creative set and the campaign went live on time.</p>
+      </div>
+    </article>
+
+    <!-- VIDEO -->
+    <article class="svc-block rv" id="video">
+      <div class="svc-meta">
+        <div class="svc-num">05 / VIDEO</div>
+        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+        <div class="svc-tags"><span>3 to 6 days</span><span>Captions included</span></div>
+      </div>
+      <div>
+        <h2 class="svc-title">Video Editing & Motion</h2>
+        <p class="body">Reels, promos, and YouTube edits with pacing that holds attention. Send us the raw footage and a reference, get back something that looks like it cost a lot more than it did.</p>
+        <ul class="svc-includes">
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Edit, cut, and pacing</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Captions and titles</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Motion graphics</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Color and sound balance</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Platform-ready exports</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Vertical and wide cuts</li>
+        </ul>
+        <div class="mtiers">
+          <div class="mtier"><div class="mtier-n">Short edit</div><div class="mtier-p">$59</div><div class="mtier-d">One reel or short, cut and captioned for a single platform.</div></div>
+          <div class="mtier feat"><div class="mtier-n">Promo · Popular</div><div class="mtier-p">$199</div><div class="mtier-d">A polished promo with motion graphics and a sound mix.</div></div>
+          <div class="mtier"><div class="mtier-n">Series</div><div class="mtier-p">$499</div><div class="mtier-d">A batch of edits from one shoot, formatted for every channel.</div></div>
+        </div>
+        <p class="svc-use"><b>Real example</b>A creator sent a week of raw clips on Friday and had a month of scheduled, captioned reels by Tuesday.</p>
+      </div>
+    </article>
+
+    <!-- DATA -->
+    <article class="svc-block rv" id="data">
+      <div class="svc-meta">
+        <div class="svc-num">06 / DATA</div>
+        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+        <div class="svc-tags"><span>1 to 5 days</span><span>Source-checked</span></div>
+      </div>
+      <div>
+        <h2 class="svc-title">Data & Research</h2>
+        <p class="body">Market research, lead lists, and intelligence reports that give you a real edge. We do the digging and hand you something you can act on, not a pile of tabs to read.</p>
+        <ul class="svc-includes">
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Market and competitor scans</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Targeted lead lists</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Verified contacts</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Clear summary deck</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Sources cited</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Spreadsheet export</li>
+        </ul>
+        <div class="mtiers">
+          <div class="mtier"><div class="mtier-n">Report</div><div class="mtier-p">$25</div><div class="mtier-d">A focused report on one question, summarized and sourced.</div></div>
+          <div class="mtier feat"><div class="mtier-n">Lead list · Popular</div><div class="mtier-p">$149</div><div class="mtier-d">A targeted, verified list of prospects ready for outreach.</div></div>
+          <div class="mtier"><div class="mtier-n">Research sprint</div><div class="mtier-p">$399</div><div class="mtier-d">A deep dive across competitors, market, and audience.</div></div>
+        </div>
+        <p class="svc-use"><b>Real example</b>A sales team replaced three weeks of manual prospecting with one verified list and booked meetings the same week.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ═══ COMPARISON ═══ -->
+<section class="sec" style="background:var(--black2);">
+  <div class="max-narrow">
+    <div class="s-tag rv">How we compare</div>
+    <h2 class="s-h rv" style="margin-bottom:.6rem;">The honest <em>middle.</em></h2>
+    <p class="lead rv" style="margin-bottom:1rem;">Traditional agencies do great work slowly and expensively. Freelance marketplaces are fast and cheap but a gamble. We took the good half of each.</p>
+    <div class="rv" style="overflow-x:auto;">
+      <table class="cmp">
+        <thead>
+          <tr>
+            <th scope="col">What matters</th>
+            <th scope="col" class="hl">ApexWorks</th>
+            <th scope="col">Traditional agency</th>
+            <th scope="col">Freelance marketplace</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Typical turnaround</th>
+            <td class="hl" data-label="ApexWorks">2 days average</td>
+            <td data-label="Agency">2 to 6 weeks</td>
+            <td data-label="Marketplace">Unpredictable</td>
+          </tr>
+          <tr>
+            <th scope="row">Quality is vetted</th>
+            <td class="hl" data-label="ApexWorks"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Always</td>
+            <td data-label="Agency"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Usually</td>
+            <td class="no" data-label="Marketplace">You gamble</td>
+          </tr>
+          <tr>
+            <th scope="row">One point of contact</th>
+            <td class="hl" data-label="ApexWorks"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Yes</td>
+            <td data-label="Agency"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Yes</td>
+            <td class="no" data-label="Marketplace">You manage it</td>
+          </tr>
+          <tr>
+            <th scope="row">Starting price</th>
+            <td class="hl" data-label="ApexWorks">From $25</td>
+            <td data-label="Agency">$5,000+ retainers</td>
+            <td data-label="Marketplace">Low, then it adds up</td>
+          </tr>
+          <tr>
+            <th scope="row">Revisions included</th>
+            <td class="hl" data-label="ApexWorks"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Until right</td>
+            <td data-label="Agency">Capped by scope</td>
+            <td class="no" data-label="Marketplace">Often charged extra</td>
+          </tr>
+          <tr>
+            <th scope="row">Money-back guarantee</th>
+            <td class="hl" data-label="ApexWorks"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Yes</td>
+            <td class="no" data-label="Agency">Rare</td>
+            <td class="no" data-label="Marketplace">Rare</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA BAND ═══ -->
+<section class="cta-band">
+  <div class="inner rv">
+    <h2>Not sure which tier <em>fits?</em></h2>
+    <p>Tell us the goal and the budget. We will point you to the right option, even if it is the smaller one.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn-p"><span>Get a Quote</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="faq.html" class="btn-s">Read the FAQ</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-in">
+    <div class="f-brand">
+      <a href="index.html" class="f-logo"><span class="logo-dot"></span>Apex<span>Works</span></a>
+      <p class="f-tagline">One agency, every service. We source vetted specialists, manage the work, and ship results from our studio in Los Angeles.</p>
+    </div>
+    <nav class="f-nav" aria-label="Footer">
+      <div class="f-nav-group">
+        <div class="f-nav-label">Company</div>
+        <a href="about.html">About</a>
+        <a href="process.html">Process</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div class="f-nav-group">
+        <div class="f-nav-label">Services</div>
+        <a href="services.html">All Services</a>
+        <a href="services.html#branding">Branding</a>
+        <a href="services.html#web">Web Dev</a>
+        <a href="services.html#video">Video</a>
+      </div>
+      <div class="f-nav-group">
+        <div class="f-nav-label">Get Started</div>
+        <a href="contact.html">Start a Project</a>
+        <a href="contact.html">Get a Quote</a>
+        <a href="faq.html">Common Questions</a>
+      </div>
+    </nav>
+  </div>
+  <div class="foot-btm">
+    <div class="f-c">© 2026 ApexWorks Agency. All rights reserved.</div>
+    <div class="f-c">Built for excellence. Los Angeles, CA</div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="assets/site.js"></script>
+<script>
+/* Page scene: floating wireframe geometric shards */
+ApexThree('page-canvas', function (api) {
+  var T = api.THREE, scene = api.scene, cam = api.camera;
+  cam.position.set(0, 0, 10);
+  var group = new T.Group(); group.position.set(2.6, 0, 0); scene.add(group);
+  var geos = [new T.OctahedronGeometry(1, 0), new T.TetrahedronGeometry(1.1, 0), new T.IcosahedronGeometry(0.85, 0)];
+  var shards = [];
+  for (var i = 0; i < 8; i++) {
+    var m = new T.Mesh(geos[i % geos.length], new T.MeshBasicMaterial({ color: 0xd4b65e, wireframe: true, transparent: true, opacity: 0.26 + Math.random() * 0.22 }));
+    m.position.set((Math.random() - 0.5) * 5.5, (Math.random() - 0.5) * 5.5, (Math.random() - 0.5) * 4);
+    var s = 0.5 + Math.random() * 1.1; m.scale.set(s, s, s);
+    m.userData = { rx: (Math.random() - 0.5) * 0.5, ry: (Math.random() - 0.5) * 0.5, ph: Math.random() * Math.PI * 2 };
+    group.add(m); shards.push(m);
+  }
+  var N = 360, g = new T.BufferGeometry(), pos = new Float32Array(N * 3);
+  for (var j = 0; j < N; j++) { var r = 4 + Math.random() * 7; var th = Math.random() * Math.PI * 2; var ph = Math.acos(Math.random() * 2 - 1);
+    pos[j*3] = r*Math.sin(ph)*Math.cos(th); pos[j*3+1] = r*Math.sin(ph)*Math.sin(th); pos[j*3+2] = r*Math.cos(ph) - 2; }
+  g.setAttribute('position', new T.BufferAttribute(pos, 3));
+  scene.add(new T.Points(g, new T.PointsMaterial({ color: 0xd4b65e, size: 0.018, transparent: true, opacity: 0.5, blending: T.AdditiveBlending })));
+
+  var tx = 0, ty = 0, cx = 0, cy = 0;
+  addEventListener('mousemove', function (e) { tx = (e.clientX / innerWidth - 0.5) * 0.4; ty = (e.clientY / innerHeight - 0.5) * 0.4; }, { passive: true });
+
+  return function (t) {
+    cx += (tx - cx) * 0.05; cy += (ty - cy) * 0.05;
+    cam.position.x = cx * 1.5; cam.position.y = -cy * 1.5; cam.lookAt(2.6, 0, 0);
+    group.rotation.y = t * 0.05;
+    for (var k = 0; k < shards.length; k++) {
+      var m = shards[k];
+      m.rotation.x = t * m.userData.rx; m.rotation.y = t * m.userData.ry;
+      m.position.y += Math.sin(t + m.userData.ph) * 0.0022;
+    }
+  };
+});
+</script>
+</body>
+</html>
