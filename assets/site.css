@@ -385,3 +385,336 @@ footer{background:var(--black);border-top:1px solid var(--border-w);padding:3.5r
   .tl-item{grid-template-columns:3rem 1fr;gap:1rem;}
   .tl-year{font-size:.62rem;}
 }
+
+
+/* ============================================================
+   MOBILE OPTIMISATION — @media (max-width: 768px)
+   Rules below are ADDITIVE — desktop styles untouched.
+   Target: 375px (iPhone SE / standard iPhone)
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  /* ── GLOBAL SPACING ── */
+  .sec { padding: 3rem 1.25rem; }
+  .sec-sm { padding: 2rem 1.25rem; }
+
+  /* ── CUSTOM CURSOR — disable on touch ── */
+  body, * { cursor: auto !important; }
+  #cur, #cur-r { display: none !important; }
+
+  /* ── NAVIGATION ── */
+  .nav {
+    padding: 1rem 1.25rem;
+  }
+  .nav.stuck {
+    padding: .85rem 1.25rem;
+  }
+  .nav-links { display: none; }
+  .nav-burger { display: flex; }
+  .logo { font-size: 1.15rem; }
+
+  /* ── HERO (INDEX) ── */
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: 100dvh;
+  }
+  .hero-right {
+    position: absolute;
+    inset: 0;
+    opacity: .35;
+  }
+  /* Limit Three.js canvas height on mobile */
+  #three-canvas {
+    max-height: 50vh !important;
+  }
+  .hero-left {
+    padding: 6rem 1.25rem 3rem;
+    position: relative;
+    z-index: 2;
+    justify-content: flex-end;
+  }
+  h1.hero-h {
+    font-size: clamp(2.4rem, 10vw, 3.6rem);
+    margin-bottom: 1.4rem;
+    line-height: 1.0;
+    letter-spacing: -.03em;
+  }
+  .sub {
+    font-size: .88rem;
+    margin-bottom: 1.8rem;
+    max-width: 100%;
+    line-height: 1.75;
+  }
+  .ctas {
+    flex-direction: column;
+    gap: .7rem;
+  }
+  .ctas .btn-p,
+  .ctas .btn-s {
+    width: 100%;
+    justify-content: center;
+    min-height: 52px;
+  }
+  /* Hide decorative corner data widget */
+  .corner-data { display: none !important; }
+  /* Hide scroll cue */
+  .scroll-cue { display: none; }
+  /* Noise overlay — keep but lighter for perf */
+  .noise { opacity: .03; }
+
+  /* ── HERO METRICS ── */
+  .metrics {
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .metrics > div { flex: 1 1 auto; min-width: 80px; }
+  .mn { font-size: 1.6rem; }
+  .ml { font-size: .52rem; }
+
+  /* ── PAGE HERO (inner pages) ── */
+  .phero {
+    min-height: 46vh;
+    padding: 7rem 1.25rem 3rem;
+    max-height: 50vh;
+  }
+  .phero canvas {
+    max-height: 50vh !important;
+  }
+  .phero-h {
+    font-size: clamp(2rem, 9vw, 3rem);
+    margin-bottom: 1rem;
+  }
+  .phero-sub {
+    font-size: .85rem;
+    max-width: 100%;
+  }
+  .kicker {
+    font-size: .55rem;
+    margin-bottom: 1.2rem;
+  }
+
+  /* ── SECTION HEADINGS ── */
+  .s-h {
+    font-size: clamp(1.8rem, 7vw, 2.8rem);
+  }
+  .lead {
+    font-size: .9rem;
+    margin-top: 1rem;
+  }
+
+  /* ── MANIFESTO / SPLIT LAYOUT ── */
+  .man-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .man-stick { position: static; }
+  .man-body { max-width: 100%; }
+  .split { grid-template-columns: 1fr; gap: 2rem; }
+  .split-stick { position: static; }
+
+  /* ── BENTO GRID — single column ── */
+  .bento {
+    grid-template-columns: 1fr;
+    gap: 1px;
+  }
+  .bc-a, .bc-b, .bc-c, .bc-d, .bc-e, .bc-f, .bc-g {
+    grid-column: span 1 !important;
+  }
+  .bc { padding: 1.6rem; }
+  .bc-t { font-size: 1.1rem; }
+  .bc-d { font-size: .8rem; }
+  /* Hide bento arrow decorations on mobile */
+  .bc-arr { display: none; }
+
+  /* Services header */
+  .svcs-head {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .svcs-sub { text-align: left; justify-self: start; max-width: 100%; }
+
+  /* ── PROCESS ROWS ── */
+  .proc-list { margin-top: 2rem; }
+  .pr {
+    grid-template-columns: 2.5rem 1fr;
+    gap: 1rem;
+    padding: 1.6rem 0;
+  }
+  /* Hide description and timing tags on mobile for cleanliness */
+  .pr-d { display: none; }
+  .pr-tg { display: none; }
+  .pr-t {
+    font-size: clamp(1rem, 4.5vw, 1.4rem);
+    letter-spacing: -.01em;
+  }
+  .pr-n { font-size: .55rem; }
+  /* Hide decorative watermark text */
+  .proc::before { display: none; }
+
+  /* ── GRIDS ── */
+  .grid-2, .grid-3 { grid-template-columns: 1fr; gap: 1rem; }
+
+  /* ── TEAM GRID — single column (max 2 cols at wider mobile) ── */
+  .team { grid-template-columns: 1fr; gap: 1rem; }
+  .member { padding: 1.6rem; }
+  .m-av { width: 52px; height: 52px; margin-bottom: 1rem; }
+
+  /* ── TIERS / PRICING ── */
+  .tiers { grid-template-columns: 1fr; gap: 1rem; }
+  .tier { padding: 1.6rem; }
+
+  /* ── TESTIMONIALS — single column ── */
+  .testi-grid {
+    grid-template-columns: 1fr;
+    gap: 1px;
+  }
+  .tc { padding: 1.8rem 1.25rem; }
+  .tc-feat {
+    grid-column: span 1 !important;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1.25rem;
+  }
+  .tc-feat .tc-q { font-size: 1rem; }
+
+  /* ── SERVICE DETAIL BLOCKS ── */
+  .svc-block {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2rem 0;
+  }
+  .svc-title { font-size: clamp(1.3rem, 5vw, 1.8rem); }
+  .svc-includes { grid-template-columns: 1fr; }
+
+  /* ── ALT CONTACT GRID ── */
+  .alt-grid { grid-template-columns: 1fr; gap: .85rem; }
+  .alt-card { padding: 1.4rem; }
+
+  /* ── FORM ── */
+  .req-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .fcard { padding: 1.6rem 1.25rem; }
+  .tw { grid-template-columns: 1fr; }
+  .f input,
+  .f select,
+  .f textarea {
+    font-size: 1rem; /* prevent iOS zoom on focus */
+    min-height: 52px;
+    padding: 1rem 1.1rem;
+  }
+  .f textarea { min-height: 100px; }
+  .sbtn {
+    min-height: 56px;
+    font-size: .75rem;
+  }
+
+  /* ── CONTACT PAGE — trust bullets ── */
+  .trust { gap: .7rem; }
+  .tr { font-size: .8rem; }
+
+  /* ── CTA BAND ── */
+  .cta-band { padding: 3rem 1.25rem; }
+  .cta-band h2 { font-size: clamp(1.6rem, 7vw, 2.4rem); }
+  .cta-band p { font-size: .85rem; }
+  .cta-actions { flex-direction: column; gap: .7rem; align-items: stretch; }
+  .cta-actions .btn-p,
+  .cta-actions .btn-s { width: 100%; justify-content: center; min-height: 52px; }
+
+  /* ── ACCORDION (FAQ) ── */
+  .acc-q {
+    font-size: .95rem;
+    padding: 1.3rem 2.5rem 1.3rem 0;
+  }
+  .acc-a-in { font-size: .85rem; padding-right: 0; }
+
+  /* ── COMPARISON TABLE ── */
+  .cmp, .cmp tbody, .cmp tr, .cmp td, .cmp th { display: block; }
+  .cmp thead { display: none; }
+  .cmp tr { border: 1px solid var(--border-w); border-radius: 12px; margin-bottom: 1rem; padding: .6rem; }
+  .cmp tbody th { font-size: .9rem; padding: .8rem; border-bottom: 1px solid var(--border-w); }
+  .cmp td { display: flex; justify-content: space-between; gap: 1rem; border: none; padding: .6rem .8rem; }
+  .cmp td::before { content: attr(data-label); font-family: 'JetBrains Mono', monospace; font-size: .55rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
+
+  /* ── ZIGZAG ROWS ── */
+  .zz-i {
+    gap: 1rem;
+    padding: 1.6rem 0;
+  }
+  .zz-t { font-size: 1.05rem; }
+  .zz-d { font-size: .82rem; }
+
+  /* ── TIMELINE ── */
+  .timeline::before { left: 3.5rem; }
+  .tl-item { grid-template-columns: 2.8rem 1fr; gap: .8rem; padding: 1.2rem 0; }
+  .tl-year { font-size: .6rem; }
+  .tl-t { font-size: .95rem; }
+  .tl-d { font-size: .8rem; }
+
+  /* ── MARQUEE ── */
+  .marquee-track { animation-duration: 20s; }
+
+  /* ── FOOTER — single column ── */
+  footer { padding: 2.5rem 1.25rem 1.5rem; }
+  .foot-in {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.8rem;
+    padding-bottom: 1.5rem;
+  }
+  .f-nav {
+    flex-direction: column;
+    gap: 1.4rem;
+    width: 100%;
+  }
+  .f-nav-group { gap: .5rem; }
+  .foot-btm {
+    flex-direction: column;
+    gap: .5rem;
+  }
+  .f-c { font-size: .54rem; }
+
+  /* ── HIDE DECORATIVE ELEMENTS ── */
+  /* Orbiting rings bg element via proc watermark already hidden */
+  /* Noise overlay handled above */
+  /* Hide section decorative pseudo-elements that are performance-heavy */
+  .req::before { display: none; }
+  .cta-band::before { display: none; }
+
+  /* ── PREVENT HORIZONTAL OVERFLOW ── */
+  .max, .max-narrow {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  img, canvas, iframe, video { max-width: 100%; }
+
+  /* ── CARDS ── */
+  .card { padding: 1.6rem; }
+  .card-t { font-size: 1.1rem; }
+
+  /* ── BREADCRUMBS ── */
+  .crumbs { font-size: .54rem; gap: .4rem; }
+
+  /* ── SECTION TAG ── */
+  .s-tag { font-size: .55rem; margin-bottom: 1rem; }
+}
+
+/* ── 480px and under — tighten more ── */
+@media (max-width: 480px) {
+  h1.hero-h { font-size: clamp(2rem, 11vw, 2.8rem); }
+  .s-h { font-size: clamp(1.6rem, 8vw, 2.4rem); }
+  .phero-h { font-size: clamp(1.8rem, 10vw, 2.6rem); }
+  .bc { padding: 1.4rem 1.1rem; }
+  .tc { padding: 1.4rem 1rem; }
+  .fcard { padding: 1.4rem 1rem; }
+  /* Team grid: single column only */
+  .team { grid-template-columns: 1fr; }
+  /* Metrics: show all but compressed */
+  .metrics > div { min-width: 70px; }
+  .mn { font-size: 1.4rem; }
+}
