@@ -161,6 +161,105 @@
     });
   };
 
+  /* ---------- LOGO 3D SPHERE ----------
+     Replaces every .logo .logo-dot with a 32×32 Three.js canvas.
+     Falls back silently to the existing dot if THREE is unavailable.
+     Isolated renderer per logo — does not touch the page-level scene. */
+  (function () {
+    if (!window.THREE) return;
+
+    document.querySelectorAll('.logo .logo-dot').forEach(function (dot) {
+      var logo = dot.parentElement; // <a class="logo">
+
+      /* ── canvas ── */
+      var cv = document.createElement('canvas');
+      cv.className = 'logo-ball';
+      cv.setAttribute('aria-hidden', 'true');
+      cv.style.cssText = 'pointer-events:none;flex-shrink:0;display:block;';
+      dot.parentNode.insertBefore(cv, dot);
+      dot.style.display = 'none'; // hide dot, keep in DOM as CSS fallback
+
+      /* ── scene ── */
+      var scene = new THREE.Scene();
+      var cam   = new THREE.PerspectiveCamera(45, 1, 0.1, 50);
+      cam.position.set(0, 0, 3.2);
+
+      var renderer = new THREE.WebGLRenderer({ canvas: cv, alpha: true, antialias: true });
+      renderer.setSize(32, 32);
+      renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+
+      /* ── sphere ── */
+      var mat = new THREE.MeshStandardMaterial({
+        color: 0xd4b65e, metalness: 0.95, roughness: 0.1,
+        emissive: 0x8a7530, emissiveIntensity: 0.4
+      });
+      var mesh = new THREE.Mesh(new THREE.SphereGeometry(1, 32, 32), mat);
+      scene.add(mesh);
+
+      /* ── lights ── */
+      scene.add(new THREE.AmbientLight(0xd4b65e, 0.4));
+      var pt = new THREE.PointLight(0xf0d484, 3.5, 20);
+      scene.add(pt);
+
+      /* ── hover state (desktop / fine-pointer only) ── */
+      var hov = 0, hovTarget = 0, hovTimer = null;
+      if (logo && finePointer) {
+        logo.addEventListener('mouseenter', function () {
+          hovTarget = 1;
+          if (hovTimer) clearTimeout(hovTimer);
+          hovTimer = setTimeout(function () { hovTarget = 0; }, 600);
+        });
+        logo.addEventListener('mouseleave', function () {
+          hovTarget = 0;
+          if (hovTimer) { clearTimeout(hovTimer); hovTimer = null; }
+        });
+      }
+
+      /* ── animation loop ── */
+      var clock = new THREE.Clock();
+      var rafId = null;
+      var rotY = 0, prevT = 0;
+
+      function tick() {
+        if (document.hidden) { rafId = null; return; }
+        var t  = clock.getElapsedTime();
+        var dt = t - prevT; prevT = t;
+
+        // Smooth hover lerp
+        hov += (hovTarget - hov) * 0.1;
+
+        // Rotation — accumulated so speed changes don't snap the sphere
+        rotY += (0.25 + hov * 2.8) * dt;
+        mesh.rotation.y = rotY;
+        mesh.rotation.x = t * 0.07;
+
+        // Emissive heartbeat pulse + hover boost to 0.9
+        var pulse = 0.4 + Math.sin(t * 1.6) * 0.18; // ~0.22 to ~0.58
+        mat.emissiveIntensity = pulse + hov * (0.9 - pulse);
+
+        // Orbiting key light
+        var a = t * 0.9;
+        pt.position.set(
+          Math.cos(a) * 2.8,
+          1.5 + Math.sin(a * 0.5) * 0.8,
+          Math.sin(a) * 2.8 + 0.5
+        );
+
+        renderer.render(scene, cam);
+        rafId = requestAnimationFrame(tick);
+      }
+
+      if (prefersReduced) {
+        renderer.render(scene, cam); // single static frame, no loop
+      } else {
+        document.addEventListener('visibilitychange', function () {
+          if (!document.hidden && !rafId) tick();
+        });
+        tick();
+      }
+    });
+  })();
+
   /* ---------- REUSABLE THREE.JS BOOTSTRAP ----------
      Handles scene/camera/renderer/resize, pauses on tab-hidden
      (prevents stuck renders), and renders a single static frame
