@@ -11,7 +11,10 @@
       "Bash(git commit *)",
       "Bash(git branch *)",
       "Bash(git remote *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(git pull *)",
+      "Bash(git stash *)",
+      "Bash(node .agents/skills/impeccable/scripts/context.mjs)"
     ]
   }
 }
