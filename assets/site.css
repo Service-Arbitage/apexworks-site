@@ -24,7 +24,7 @@
   --ease:cubic-bezier(.22,1,.36,1);
 }
 
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth;font-size:112.5%;}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important;}
   html{scroll-behavior:auto;}
