@@ -934,8 +934,6 @@ footer{background:var(--black);border-top:1px solid var(--border-w);padding:3.5r
 
     <div class="fcard rv">
       <form id="pForm" action="https://formspree.io/f/mjgqyqkq" method="POST" novalidate>
-<input type="hidden" name="_replyto">
-<input type="hidden" name="_next" value="thank-you.html">
         <div class="f">
           <label for="fname">Full Name <span class="rmk">*</span></label>
           <input type="text" id="fname" name="name" placeholder="Zara Mensah" autocomplete="name" required aria-required="true"/>
@@ -1257,11 +1255,15 @@ form.addEventListener('submit',function(e){
   }
   const btn=document.getElementById('submitBtn');
   btn.disabled=true;btn.textContent='Sending…';
-  setTimeout(()=>{
+  const finish=(success)=>{
     btn.disabled=false;btn.textContent='Send My Request →';
+    if(!success){btn.textContent='Something went wrong, try again';setTimeout(()=>{btn.textContent='Send My Request →';},4000);return;}
     form.reset();['fname','email','service'].forEach(id=>showErr(id,false));
-    window.location.href='thank-you.html';
-  },900);
+    toast.classList.add('show');clearTimeout(tt);
+    tt=setTimeout(()=>toast.classList.remove('show'),4500);
+  };
+  fetch('https://formspree.io/f/mjgqyqkq',{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}})
+    .then(r=>finish(r.ok)).catch(()=>finish(false));
 });
 
 // ─────────── LOGO 3D SPHERE ───────────

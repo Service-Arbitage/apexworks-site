@@ -70,8 +70,6 @@
 
     <div class="fcard rv">
       <form id="pForm" action="https://formspree.io/f/mjgqyqkq" method="POST" novalidate>
-<input type="hidden" name="_replyto">
-<input type="hidden" name="_next" value="thank-you.html">
         <div class="f">
           <label for="fname">Full Name <span class="rmk">*</span></label>
           <input type="text" id="fname" name="name" placeholder="Zara Mensah" autocomplete="name" required aria-required="true"/>
@@ -244,6 +242,7 @@ ApexThree('page-canvas', function (api) {
 ApexForm({
   formId: 'pForm',
   btnId: 'submitBtn',
+  endpoint: 'https://formspree.io/f/mjgqyqkq',
   required: ['fname', 'email', 'service'],
   btnLabel: 'Send My Request →',
   onSuccess: function () { window.location.href = 'thank-you.html'; }

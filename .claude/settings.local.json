@@ -14,7 +14,9 @@
       "Bash(git push *)",
       "Bash(git pull *)",
       "Bash(git stash *)",
-      "Bash(node .agents/skills/impeccable/scripts/context.mjs)"
+      "Bash(node .agents/skills/impeccable/scripts/context.mjs)",
+      "Bash(git checkout *)",
+      "Bash(GIT_EDITOR=true git rebase --continue)"
     ]
   }
 }

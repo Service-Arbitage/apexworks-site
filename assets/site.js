@@ -147,8 +147,15 @@
         return;
       }
       if (btn) { btn.disabled = true; btn.innerHTML = '<span class="spin"></span> Sending'; }
-      setTimeout(function () {
+      var finish = function (success) {
         if (btn) { btn.disabled = false; btn.textContent = opts.btnLabel || 'Send'; }
+        if (!success) {
+          if (btn) {
+            btn.textContent = 'Something went wrong, try again';
+            setTimeout(function () { btn.textContent = opts.btnLabel || 'Send'; }, 4000);
+          }
+          return;
+        }
         form.reset();
         required.forEach(function (id) { showErr(id, false); });
         if (typeof onSuccess === 'function') { onSuccess(); return; }
@@ -157,7 +164,14 @@
           clearTimeout(tt);
           tt = setTimeout(function () { toast.classList.remove('show'); }, 4500);
         }
-      }, 900);
+      };
+      if (opts.endpoint) {
+        fetch(opts.endpoint, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+          .then(function (r) { finish(r.ok); })
+          .catch(function () { finish(false); });
+      } else {
+        setTimeout(function () { finish(true); }, 900);
+      }
     });
   };
 
